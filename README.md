@@ -3,9 +3,9 @@
 
 Пример использования:
 
-class StatusAdmin(LockMixinAdmin, admin.ModelAdmin):
-    lock_id_list = [1, 2]
-    lock_readonly_fields = ['title']
+    class StatusAdmin(LockMixinAdmin, admin.ModelAdmin):
+        lock_id_list = [1, 2]
+        lock_readonly_fields = ['title']
     
-admin.site.register(models.Status, StatusAdmin)
+    admin.site.register(models.Status, StatusAdmin)
 
